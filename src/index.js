@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import SearchMovies from './components/SearchMovies'
+import SearchMovies from './components/SearchMovies.jsx'
 
 import './App.css'
 
