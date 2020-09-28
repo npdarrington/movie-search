@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 
 export default function SearchMovies() {
   const [query, setQuery] = useState('');
+  const [movies, setMovies] = useState([]);
 
   const searchMovies = async (event) => {
     event.preventDefault();
@@ -9,7 +10,7 @@ export default function SearchMovies() {
     try {
       const res = await fetch(url);
       const data  = await res.json();
-      console.log(data);
+      setMovies(data.results);
     } catch(err) {
       console.log(err);
     }
